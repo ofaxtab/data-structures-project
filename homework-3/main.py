@@ -16,6 +16,8 @@ if __name__ == '__main__':
     assert queue.head.next_node.data == 'data2'
     assert queue.tail.data == 'data3'
     assert queue.tail.next_node is None
+    # assert queue.dequeue() == 'data1'
+    # assert queue.dequeue() == 'data2'
     print(queue.tail.next_node.data)  # AttributeError: 'NoneType' object has no attribute 'data'
 
     # Проверяем магический метод __str__

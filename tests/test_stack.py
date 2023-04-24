@@ -38,3 +38,9 @@ class StackTest(TestCase):
         self.assertEqual(stack.pop(), 'data1')
         self.assertIs(stack.pop(), None)
 
+    def test_str(self):
+        stack = Stack()
+        self.assertEqual(str(stack), 'Вершина стэка: None')
+        stack.push('data1')
+        # Есть зависимость от __repr__ ноды
+        self.assertEqual(str(stack), 'Вершина стэка: Node(data1)')
