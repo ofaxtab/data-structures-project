@@ -10,6 +10,8 @@ class Node:
         self.data = data
         self.next_node = next_node
 
+    def __repr__(self):
+        return f'Node({self.data})'
 
 
 class Stack:
@@ -19,6 +21,8 @@ class Stack:
         """Конструктор класса Stack"""
         self.top = None
 
+    def __str__(self):
+        return f'Вершина стэка: {self.top}'
 
     def push(self, data):
         """
@@ -28,8 +32,6 @@ class Stack:
         """
         next_node = self.top
         self.top = Node(data, next_node)
-
-
 
     def pop(self):
         """
